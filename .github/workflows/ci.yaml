@@ -1,7 +1,5 @@
 name: Basic CI
-
-on: [pull_request]
-
+on: [push]
 jobs:
   my-first-job:
     runs-on: ubuntu-latest
@@ -11,3 +9,4 @@ jobs:
         run: |
           pip install -r requirements.txt
           python ci.py
+
