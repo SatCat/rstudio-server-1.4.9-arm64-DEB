@@ -1,12 +1,12 @@
-name: Basic CI
-on: [push]
+on: push
+
 jobs:
-  my-first-job:
+  secrets:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: run python script
-        run: |
-          pip install -r requirements.txt
-          python ci.py
-
+    - run: |
+        import os
+        print([i for i in os.getenv('MY_VAR')])
+      shell: python
+      env:
+        MY_VAR: ${{ secrets.MY_SECRET }}
