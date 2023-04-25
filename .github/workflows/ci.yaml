@@ -1,3 +1,5 @@
+# simple test from "CI/CD for Machine Learning Course" - https://www.wandb.courses/courses/ci-cd-for-machine-learning
+
 on: push
 
 jobs:
